@@ -83,7 +83,6 @@ export class NavbarAnimationController {
     // Update state
     this.state.previous = this.state.current;
     this.state.current = dropdownName;
-    console.log(`Entered ${dropdownName} from ${this.state.previous} direction: ${direction}`);
   }
 
   /**
