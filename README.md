@@ -196,28 +196,36 @@ This template contains a set of predefined scripts in the `package.json` file:
 To create and publish a new version:
 
 1. **Create a changeset** - Document your changes
+
    ```bash
    pnpm changeset
    ```
+
    This opens an interactive prompt where you'll:
+
    - Select the version bump type (patch/minor/major)
    - Write a summary of your changes
    - A changeset file will be created in `.changeset/`
 
 2. **Update version** - Apply the changeset to bump version numbers
+
    ```bash
    pnpm changeset version
    ```
+
    This will:
+
    - Update the version in `package.json`
    - Update the `CHANGELOG.md` file
    - Delete the changeset file
 
 3. **Create and push a git tag** - Tag the release and push to remote
+
    ```bash
    git tag v0.0.1
    git push origin v0.0.1
    ```
+
    Replace `v0.0.1` with your new version number
 
 4. **Update Webflow script tag** - Use the new version in your Webflow project
